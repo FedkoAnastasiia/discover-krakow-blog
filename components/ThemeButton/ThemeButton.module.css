@@ -1,0 +1,13 @@
+.themeButton {
+  border: none;
+  background-color: transparent;
+}
+
+.themeButton svg {
+  height: 25px;
+  width: 25px;
+}
+
+.themeButton svg>path {
+  fill: rgb(var(--primary-color));
+}

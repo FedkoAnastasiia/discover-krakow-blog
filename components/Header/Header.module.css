@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container>.imageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  font-size: 36px;
+  padding: 15px 0;
+  min-height: 50px;
+}
+
+.container>.imageContainer svg {
+  height: 100px;
+}
+
+.container>.imageContainer path {
+  fill: rgb(var(--primary-color))
+}
