@@ -4,12 +4,13 @@ import Link from "next/link";
 import styles from "./ImageLink.module.css";
 
 const ImageLink = (props: IImageLink & IContact) => {
+  const Icon = props.image;
   return (
     <Link href={props.href}>
       <div
         className={styles.contactImage}
         style={{ width: props.size, height: props.size }}>
-        <props.image />
+        <Icon />
       </div>
     </Link>
   );
