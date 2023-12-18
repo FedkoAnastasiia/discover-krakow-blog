@@ -2,9 +2,10 @@ import { IContact, IImageLink } from "@/common/interfaces";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./ImageLink.module.css";
+import React from "react";
 
 const ImageLink = (props: IImageLink & IContact) => {
-  const Icon = props.image;
+  const Icon: React.ElementType = props.image;
   return (
     <Link href={props.href}>
       <div

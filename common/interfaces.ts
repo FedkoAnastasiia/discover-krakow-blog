@@ -1,5 +1,5 @@
 export interface IImageLink {
-  image: React.ReactNode;
+  image: React.ElementType;
   href: string;
   alt: string;
 }
