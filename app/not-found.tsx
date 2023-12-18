@@ -5,13 +5,7 @@ import Error from "next/error";
 import Link from "next/link";
 import styles from "./not-found.module.css";
 
-const NotFound = ({
-  error,
-  reset,
-}: {
-  error: Error & { digest?: string };
-  reset: () => void;
-}) => {
+const NotFound = ({ error }: { error: Error & { digest?: string } }) => {
   useEffect(() => {
     console.error(error);
   }, [error]);
@@ -27,7 +21,7 @@ const NotFound = ({
         <h2>Looks like this page went on vacation</h2>
         <h4>
           Try our <Link href={"/"}>homepage</Link> or{" "}
-          <button onClick={() => reset()}> try again</button>
+          <Link href={"/about"}> about page</Link>
         </h4>
       </div>
     </div>
