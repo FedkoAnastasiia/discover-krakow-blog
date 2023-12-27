@@ -6,13 +6,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Post = async (props: { params: { id: string } }) => {
-  const posts = await fetch("http://localhost:3000/api/content").then((res) =>
-    res.json()
+  const posts: IPost[] = await fetch("http://localhost:3000/api/content").then(
+    (res) => res.json()
   );
 
-  const post: IPost | undefined = Array.from(posts).find(
-    (p) => p.id === props.params.id
-  );
+  const post = Array.from(posts).find((p) => p.id === props.params.id);
   if (!post) return <NotFound />;
 
   const date = new Date(post.created);

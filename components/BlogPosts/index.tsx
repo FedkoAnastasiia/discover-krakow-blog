@@ -12,12 +12,12 @@ const BlogPosts = async (props: { tag?: string }) => {
     "http://localhost:3000/api/content"
   ).then((res) => res.json());
 
-  const tags = new Map<string, number>();
+  const tags: Map<string, number> = new Map<string, number>();
 
   allPosts.forEach((p) => {
     p.tags.forEach((t) => {
-      if (tags.has(t)) {
-        tags.set(t, tags.get(t) + 1);
+      if (tags && tags.has(t)) {
+        tags.set(t, (tags.get(t) || 0) + 1);
       } else {
         tags.set(t, 1);
       }
