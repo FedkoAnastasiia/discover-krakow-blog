@@ -9,7 +9,8 @@ const BlogPosts = async (props: { tag?: string }) => {
   const filterTag = props.tag;
 
   const allPosts: IPost[] = await fetch(
-    `${process.env.NEXT_PUBLIC_VERCEL_URL}/api/content`
+    `${process.env.NEXT_PUBLIC_VERCEL_URL}/api/content`,
+    { method: "GET" }
   ).then((res) => res.json());
 
   const tags: Map<string, number> = new Map<string, number>();
