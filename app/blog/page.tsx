@@ -1,6 +1,6 @@
 import BlogPosts from "@/components/BlogPosts";
 
-const Blog = async () => {
+const Blog = () => {
   return <BlogPosts />;
 };
 

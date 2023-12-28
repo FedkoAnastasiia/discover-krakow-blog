@@ -9,7 +9,7 @@ const BlogPosts = async (props: { tag?: string }) => {
   const filterTag = props.tag;
 
   const allPosts: IPost[] = await fetch(
-    "http://localhost:3000/api/content"
+    `${process.env.LOCAL_URL}/api/content`
   ).then((res) => res.json());
 
   const tags: Map<string, number> = new Map<string, number>();
