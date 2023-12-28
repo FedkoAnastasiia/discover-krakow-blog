@@ -6,10 +6,6 @@ const navigation: INavigation[] = [
     title: "Blog",
   },
   {
-    href: "/tags",
-    title: "Tags",
-  },
-  {
     href: "/events",
     title: "Events",
   },

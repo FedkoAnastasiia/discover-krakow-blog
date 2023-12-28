@@ -8,6 +8,7 @@
   --secondary-color: 244, 249, 255;
   --primary-shadow-color: 81, 126, 203;
   --secondary-shadow-color: 183, 221, 255;
+  --neutral-color: 163, 201, 255;
 }
 
 [data-theme="dark"] {
