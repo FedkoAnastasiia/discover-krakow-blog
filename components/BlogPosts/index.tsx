@@ -5,13 +5,16 @@ import PostPreview from "../PostPreview";
 import Link from "next/link";
 import { NoPosts } from "../InfoBlock";
 
+const getPosts: IPost[] = async () => {
+  return fetch(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/content`, {
+    method: "GET",
+  }).then((res) => res.json());
+};
+
 const BlogPosts = async (props: { tag?: string }) => {
   const filterTag = props.tag;
 
-  const allPosts: IPost[] = await fetch(
-    `${process.env.NEXT_PUBLIC_VERCEL_URL}/api/content`,
-    { method: "GET" }
-  ).then((res) => res.json());
+  const allPosts: IPost[] = await getPosts();
 
   const tags: Map<string, number> = new Map<string, number>();
 
