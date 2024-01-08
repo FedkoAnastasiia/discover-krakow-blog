@@ -8,7 +8,9 @@ import { NoPosts } from "../InfoBlock";
 const getPosts = async () => {
   return fetch(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/content`, {
     method: "GET",
-  }).then((res) => res.json());
+  })
+    .then((res) => res.json())
+    .catch((err) => console.log(err.message));
 };
 
 const BlogPosts = async (props: { tag?: string }) => {
