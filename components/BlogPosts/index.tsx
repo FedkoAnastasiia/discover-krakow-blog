@@ -4,19 +4,33 @@ import styles from "./BlogPosts.module.css";
 import PostPreview from "../PostPreview";
 import Link from "next/link";
 import { NoPosts } from "../InfoBlock";
+import { PrismaClient } from "@prisma/client";
 
-const getPosts = async () => {
-  return fetch(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/content`, {
-    method: "GET",
-  })
-    .then((res) => res.json())
-    .catch((err) => console.log(err.message));
+const getPosts: IPost[] = async () => {
+  const prisma = new PrismaClient();
+  const posts = await prisma.post.findMany();
+
+  return posts.map((p) => ({
+    id: p.uid,
+    title: p.title,
+    image: p.image,
+    created: p.created,
+    preview: p.preview,
+    description: p.description,
+    location: {
+      lat: p.location[0],
+      lng: p.location[1],
+    },
+    tags: p.tags,
+  }));
 };
 
 const BlogPosts = async (props: { tag?: string }) => {
   const filterTag = props.tag;
 
   const allPosts: IPost[] = await getPosts();
+  console.log("++++++++++++++++++++++++++++");
+  console.log(allPosts);
 
   const tags: Map<string, number> = new Map<string, number>();
 
@@ -30,15 +44,16 @@ const BlogPosts = async (props: { tag?: string }) => {
     });
   });
 
-  const filteredPosts = (
+  const filteredPosts =
+    // (
     filterTag
       ? allPosts.filter((p) => p.tags.includes(filterTag))
-      : [...allPosts]
-  ).sort((a, b) => {
-    const d1 = a.created.split("-").join("");
-    const d2 = b.created.split("-").join("");
-    return a < b ? 1 : a < b ? -1 : 0;
-  });
+      : [...allPosts];
+  // ).sort((a, b) => {
+  //   const d1 = a.created.split("-").join("");
+  //   const d2 = b.created.split("-").join("");
+  //   return a < b ? 1 : a < b ? -1 : 0;
+  // }  )
 
   return (
     <div className={styles.container}>
