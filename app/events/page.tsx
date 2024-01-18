@@ -2,7 +2,7 @@ import { IEvent } from "@/common/interfaces";
 import EventPrewiew from "@/components/EventPrewiew";
 
 const getEvents = async () => {
-  return fetch(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/events`, {
+  return fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/events`, {
     method: "GET",
   })
     .then((res) => res.json())

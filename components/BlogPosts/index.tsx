@@ -6,7 +6,7 @@ import Link from "next/link";
 import { NoPosts } from "../InfoBlock";
 
 const getPosts = async () => {
-  return fetch(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/content`, {
+  return fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/content`, {
     method: "GET",
   })
     .then((res) => res.json())
