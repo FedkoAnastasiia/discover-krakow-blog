@@ -1,0 +1,44 @@
+.allPostscontainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  justify-content: space-between;
+
+  .tagsContainer {
+    width: 350px;
+    text-align: center;
+
+    .tagsList {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 20px 10px;
+      margin-top: 20px;
+      border-radius: 5px;
+      border: 1px solid rgb(var(--primary-color));
+
+      a {
+        padding: 5px;
+      }
+
+      .selectedTag {
+        border-radius: 5px;
+        background-color: rgba(var(--primary-color), 0.2);
+      }
+    }
+  }
+
+  .postsContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: inherit;
+    overflow-y: scroll;
+
+    .noPosts {
+      text-align: center;
+    }
+  }
+}

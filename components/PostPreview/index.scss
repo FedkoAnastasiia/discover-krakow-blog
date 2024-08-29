@@ -1,0 +1,23 @@
+.postPreviewContainer {
+  margin: 16px;
+  padding: 16px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 16px 0px rgba(var(--primary-color), 0.8);
+
+  &:hover {
+    box-shadow: 0px 0px 8px 4px rgba(var(--primary-color), 0.4);
+  }
+
+  .previewContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: inherit;
+    gap: 20px;
+    height: max-content;
+
+    .infoBlock {
+      height: inherit;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+.contactsCcontainer {
+  display: flex;
+  gap: 10px;
+
+  path {
+    fill: rgb(var(--primary-color));
+  }
+}
