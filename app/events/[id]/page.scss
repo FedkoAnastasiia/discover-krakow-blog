@@ -1,5 +1,35 @@
 .eventContainer {
+  margin: 0 50px;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+
+  .eventTitle {
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+  }
+
+  h5 {
+    margin-top: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+
+  .eventDescription {
+    section {
+      font-size: 20px;
+      font-weight: 200;
+      text-indent: 30px;
+      margin: 20px 0;
+      word-spacing: 1.5px;
+      text-align: justify;
+    }
+
+    h2 {
+      font-weight: 700;
+      text-align: center;
+      padding-top: 20px;
+    }
+  }
 }
