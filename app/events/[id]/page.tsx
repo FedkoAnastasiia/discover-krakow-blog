@@ -1,3 +1,5 @@
+import moment from "moment";
+
 import { MapProvider } from "@/providers/map-provider";
 import { MapComponent } from "@/components/Map";
 import events from "@/data/events";
@@ -14,8 +16,8 @@ const Event = (props: { params: { id: string } }) => {
   return (
     <MapProvider>
       <article className="eventContainer">
-        <h1>{event.title}</h1>
-        <h6>{event.date}</h6>
+        <p className="eventTitle">{event.title}</p>
+        <h5>{moment(event.date).format("D MMMM YYYY, dddd")}</h5>
         <div
           className="eventDescription"
           dangerouslySetInnerHTML={{ __html: event.description }}
