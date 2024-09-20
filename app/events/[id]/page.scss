@@ -2,4 +2,16 @@
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+
+  h6 {
+    margin-top: 15px;
+    font-weight: 900;
+  }
+
+  .eventDescription {
+    section {
+      margin: 20px 0;
+      word-spacing: 1.5px;
+    }
+  }
 }
