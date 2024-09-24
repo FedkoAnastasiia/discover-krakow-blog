@@ -1,7 +1,9 @@
-import moment from "moment";
+"use client";
 
-import { MapProvider } from "@/providers/map-provider";
-import { MapComponent } from "@/components/Map";
+import moment from "moment";
+import dynamic from "next/dynamic";
+import { useMemo } from "react";
+
 import events from "@/data/events";
 
 import { NotFound } from "@/components/InfoBlock";
@@ -11,10 +13,19 @@ import "./page.scss";
 const Event = (props: { params: { id: string } }) => {
   const event = Array.from(events).find((p) => p.id === props.params.id);
 
+  const Map = useMemo(
+    () =>
+      dynamic(() => import("@/components/Map"), {
+        loading: () => <p>A map is loading</p>,
+        ssr: false,
+      }),
+    []
+  );
+
   if (!event) return <NotFound />;
 
   return (
-    <MapProvider>
+    <div className="eventPageContainer">
       <article className="eventContainer">
         <p className="eventTitle">{event.title}</p>
         <h5>{moment(event.date).format("D MMMM YYYY, dddd")}</h5>
@@ -23,9 +34,8 @@ const Event = (props: { params: { id: string } }) => {
           dangerouslySetInnerHTML={{ __html: event.description }}
         />
       </article>
-
-      <MapComponent location={event.location} />
-    </MapProvider>
+      <Map location={event.location} />
+    </div>
   );
 };
 

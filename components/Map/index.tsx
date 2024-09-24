@@ -1,21 +1,8 @@
-"use client";
+import { MapContainer, Marker, TileLayer, Tooltip } from "react-leaflet";
 
-import { GoogleMap, Marker } from "@react-google-maps/api";
-
-const defaultMapOptions = {
-  zoomControl: true,
-  tilt: 0,
-  gestureHandling: "auto",
-  mapTypeId: "satellite",
-};
-
-const defaultMapZoom = 16;
-
-export const defaultMapContainerStyle = {
-  width: "600px",
-  height: "300px",
-  borderRadius: "15px",
-};
+import "leaflet/dist/leaflet.css";
+import "leaflet-defaulticon-compatibility";
+import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
 
 interface IMapComponentProps {
   location: google.maps.LatLngLiteral;
@@ -23,16 +10,18 @@ interface IMapComponentProps {
 
 const MapComponent = ({ location }: IMapComponentProps) => {
   return (
-    <div className="w-full">
-      <GoogleMap
-        mapContainerStyle={defaultMapContainerStyle}
-        center={location}
-        zoom={defaultMapZoom}
-        options={defaultMapOptions}>
-        <Marker position={{ lat: location.lat, lng: location.lng }} />
-      </GoogleMap>
-    </div>
+    <MapContainer
+      center={location}
+      zoom={13}
+      scrollWheelZoom={false}
+      className="mapComponentContainer">
+      <TileLayer
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      />
+      <Marker position={location} />
+    </MapContainer>
   );
 };
 
-export { MapComponent };
+export default MapComponent;
