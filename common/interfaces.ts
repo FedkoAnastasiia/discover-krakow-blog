@@ -1,3 +1,5 @@
+import { LatLngExpression } from "leaflet";
+
 export interface IImageLink {
   image: React.ElementType;
   href: string;
@@ -19,7 +21,7 @@ export interface IPost {
   image: string;
   description: string;
   created: string;
-  location: google.maps.LatLngLiteral;
+  location: LatLngExpression;
   tags: string[];
   preview: string;
 }

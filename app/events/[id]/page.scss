@@ -1,35 +1,53 @@
-.eventContainer {
-  margin: 0 50px;
+.eventPageContainer {
   display: flex;
   flex-flow: column nowrap;
-  align-items: center;
+  justify-content: center;
 
-  .eventTitle {
-    font-size: 30px;
-    font-weight: 800;
-    letter-spacing: 1.5px;
-  }
+  .eventContainer {
+    margin: 0 50px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
 
-  h5 {
-    margin-top: 15px;
-    font-weight: 700;
-    letter-spacing: 2px;
-  }
-
-  .eventDescription {
-    section {
-      font-size: 20px;
-      font-weight: 200;
-      text-indent: 30px;
-      margin: 20px 0;
-      word-spacing: 1.5px;
-      text-align: justify;
+    .eventTitle {
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
     }
 
-    h2 {
+    h5 {
+      margin-top: 15px;
       font-weight: 700;
-      text-align: center;
+      letter-spacing: 2px;
+    }
+
+    .eventDescription {
+      section {
+        font-size: 20px;
+        font-weight: 200;
+        text-indent: 30px;
+        margin: 20px 0;
+        word-spacing: 1.5px;
+        text-align: justify;
+      }
+
+      h2 {
+        font-weight: 700;
+        text-align: center;
+        padding-top: 20px;
+      }
+    }
+  }
+  .mapComponentContainer {
+    width: 700px;
+    height: 400px;
+    margin: 20px auto;
+
+    &.mapLoading {
       padding-top: 20px;
+      text-align: center;
+      font-size: 20px;
+      letter-spacing: 1.5px;
     }
   }
 }
