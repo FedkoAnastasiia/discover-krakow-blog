@@ -5,7 +5,7 @@ import "leaflet-defaulticon-compatibility";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
 
 interface IMapComponentProps {
-  location: google.maps.LatLngLiteral;
+  location: number[];
 }
 
 const MapComponent = ({ location }: IMapComponentProps) => {

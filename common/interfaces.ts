@@ -19,7 +19,7 @@ export interface IPost {
   image: string;
   description: string;
   created: string;
-  location: google.maps.LatLngLiteral;
+  location: number[];
   tags: string[];
   preview: string;
 }
