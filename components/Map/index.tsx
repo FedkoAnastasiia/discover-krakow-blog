@@ -1,11 +1,12 @@
 import { MapContainer, Marker, TileLayer, Tooltip } from "react-leaflet";
+import { LatLngExpression } from "leaflet";
 
 import "leaflet/dist/leaflet.css";
 import "leaflet-defaulticon-compatibility";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
 
 interface IMapComponentProps {
-  location: google.maps.LatLngLiteral;
+  location: LatLngExpression;
 }
 
 const MapComponent = ({ location }: IMapComponentProps) => {

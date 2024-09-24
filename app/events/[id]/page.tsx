@@ -16,7 +16,9 @@ const Event = (props: { params: { id: string } }) => {
   const Map = useMemo(
     () =>
       dynamic(() => import("@/components/Map"), {
-        loading: () => <p>A map is loading</p>,
+        loading: () => (
+          <p className="mapComponentContainer mapLoading">A map is loading</p>
+        ),
         ssr: false,
       }),
     []
