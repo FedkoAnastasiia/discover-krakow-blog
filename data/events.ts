@@ -12,7 +12,7 @@ const events: IEvent[] = [
     tags: ["Old town", "Main Square", "Christmas Market"],
     location: [50.06190678181494, 19.93675426432058],
     image: "/images/christmas-market.jpg",
-    created: "20/11/2023",
+    created: "2023-11-20",
   },
   {
     id: "family-day-2024",
@@ -25,7 +25,7 @@ const events: IEvent[] = [
     tags: ["Family day"],
     location: [50.06792848390337, 19.99139881476751],
     image: "/images/family-day-2024.jpg",
-    created: "20/05/2024",
+    created: "2024-05-20",
   },
   {
     id: "dragon-parade-2024",
@@ -38,7 +38,7 @@ const events: IEvent[] = [
     tags: ["Dragon parade"],
     location: [50.055068666386234, 19.931743543258488],
     image: "/images/dragon-parade-2024.jpg",
-    created: "30/05/2024",
+    created: "2024-05-20",
   },
   {
     id: "pierogi-festival-2024",
@@ -51,7 +51,46 @@ const events: IEvent[] = [
     tags: ["Old town", "Small Market Square", "Food"],
     location: [50.06136022802369, 19.940416633916453],
     image: "/images/pierogi-festival-2024.jpg",
-    created: "20/07/2024",
+    created: "2024-07-20",
+  },
+  {
+    id: "krakow-jazz-festival-2024",
+    date: "2024-09-26",
+    title: "Krakow Jazz Festival",
+    preview:
+      " The Seifert Competition in collaboration with the Jazz Juniors Festival and Competition will be held under the umbrella brand of Kraków Jazz Week. The Seifert Competition will take place from September 26 to 29, 2024. The Jazz Juniors Festival and Competition will run from September 30 to October 3, 2024.",
+    description:
+      "<h2>Seifert Competition for the sixth time!</h2><section>Violinists, cellists and violists from 12 countries, including as far away as Japan, Taiwan, Brazil and the USA, applied for the 6th edition of the competition. In addition, among the applicants were musicians from Spain, Portugal, Italy, France, Austria, Germany, Great Britain and Poland. Competition entries were judged by an international jury consisting of: Anja Lechner, Michal Urbaniak and Ernst Reijseger. The jury qualified 10 violinists for the auditions in Krakow, including: Anais Drago (Italy), Tomohiro Ishii (Japan), Aleksandra Krynska (Poland), Wojtek Maciejowski (Poland), Andrew Magill (USA), Amalia Obrębowska (Poland), Chase Potter (USA), Hugo Van Rechem (France), Michal Schab (Poland), Joao Silva (Portugal).</section><section>This year's edition of the Zbigniew Seifert International Violin Competition is the sixth edition of this event, during which we meet in a circle of jazz lovers to honor the memory of the exceptional artist Seifert was. We are pleased that the competition meets with great interest, attracting participants from the farthest corners of the globe. This year applications arrived from as far away as Taiwan, Brazil, Japan and the USA. Among the qualified participants, we also have violinists from Italy, France, Portugal and a large group of Poles. We hope that the September meeting will be fruitful not only in terms of the competition, but also create a space for inspiring exchanges of experience and amazing musical moments. Although there is an unspoken rivalry during the competition, we equally wish to emphasize the spirit of cooperation and creative energy that always accompanies this event,” says Aneta Norek-Skrycka, president of the Zbigniew Seifert Foundation.</section><section>Qualified for the 6th edition of the Seifert Competition, young artists wishing to tackle the works of Zbigniew Seifert - performance of his works is mandatory at each stage of the competition - will hear during auditions open to the public, which will be held at the CRICOTEKA Center for the Documentation of the Art of Tadeusz Kantor in Cracow (2-4 Nadwiślańska Street) on September 26-29. Participants in the competition will be accompanied by the same rhythm section consisting of: Dominik Wania (piano), Michał Kapczuk (double bass), Dawid Fortuna (drums).<section>Qualified for the 6th edition of the Seifert Competition, young artists wishing to tackle the works of Zbigniew Seifert - performance of his works is mandatory at each stage of the competition - will hear during auditions open to the public, which will be held at the CRICOTEKA Center for the Documentation of the Art of Tadeusz Kantor in Cracow (2-4 Nadwiślańska Street) on September 26-29. Participants in the competition will be accompanied by the same rhythm section consisting of: Dominik Wania (piano), Michał Kapczuk (double bass), Dawid Fortuna (drums).</section> ",
+    tags: ["Music festival", "Jazz"],
+    location: [50.04730002161711, 19.95105593990726],
+    image: "/images/krakow-jazz-week.jpg",
+    created: "2024-09-25",
+  },
+  {
+    id: "patchlab-2024",
+    date: "2024-10-17",
+    title: "Patchlab 2024: ERROЯ?",
+    preview:
+      "Patchlab Digital Art Festival is an annual internationally recognised event for art based on the latest technologies and creative coding. It tries to reflect the constantly changing influence of technology on society and the environment by means of art. It has been organised in Krakow, Poland since 2012 by the Photon Foundation. The festival program is focused on creative potential in machines, algorithms, programming and databases, exploring key phenomena in contemporary culture and  digital art, including VR/AR/XR, artificial intelligence, hacking and digital identities. The program includes exhibitions, performances and audiovisual concerts, video screenings, talks, workshops, artist in residencies and discussions with experts.",
+    description:
+      "<h2>ABOUT THE PROGRAMME</h2><section>An error, a mistake, a deviation from plans, assumptions or the chosen course. Seemingly pejorative, this phenomenon in fact opens up space for discourse on the unpredictable effects and directions of violent aberrations. In an era in which the uncontrolled development of artificial intelligence technologies is constantly pushing the boundaries of human understanding, and the growing climate crisis, geopolitical instability, polarization of societies and new tools for manipulating reality – such as fake news, deep fake or AI hallucinations – have become everyday life, we must ask ourselves a fundamental question: did something go wrong? Or maybe these disruptions can paradoxically become an incentive to discover new ways of thinking and perceiving the world?</section><section>From the point of view of art and creation, an error often reveals an unexpected course of action, a new idea or space for interpretation, creating something peculiar, unusual or even innovative. It is through openness to experiment, distortion, abandonment of the chosen course and permission to make mistakes that new, surprising phenomena are discovered. What was an oddity yesterday, today becomes tamed. Results that do not fit into the initially expected framework reveal hidden desires, and by broadening horizons reveal new solutions and potentials.</section><section>Digital art is a space for exploring the unknown, it allows for the celebration of mistakes, feeds on them as an inseparable element of the creative process. This is an area where discourse not only analyzes and interprets contemporary changes, but also makes them real, translating them into new forms accessible to the general public.</section><section>In the constant dialogue between failure and discovery, search and fulfillment, our understanding of technology and its impact on our reality is transformed, in which art and technology coexist, revealing infinite possibilities for the future.</section><section>The titular <b>ERROЯ</b>? - progress or regression? Utopia or dystopia? Beginning or end?</section><section>This year’s program includes a variety of forms and events between 17th and 20th October, including interdisciplinary special projects such as <b><i>IVF-X</i></b> - exploring the topic of digital procreation in the post-human era, the experience of Dutch artist and philosopher Victorine van Alphen, realized in the Potocki Palace on the Main Market Square, or the <b><i>Chromosphere</i></b> series of events, immersive audiovisual shows (also for the youngest audience) and live performances, which we will present in a 360ㅇ dome created especially for this project, which will be erected for the duration of the Patchlab festival in the heart of Wesoła, the new creative district of Kraków. This year, the Patchlab festival calendar will also include <b>music attractions</b>.</section> ",
+    tags: ["Art festival"],
+    location: [50.060808907036005, 19.936686679532322],
+    image: "/images/patchlab-2024.jpg",
+    created: "2024-09-25",
+  },
+  {
+    id: "royal-ukrainian-ballet-2025",
+    date: "2024-11-29",
+    title: "Royal Ukrainian Ballet: Swan Lake",
+    preview:
+      "This timeless and well-known performance, with its costumes, music, and fantastic story that has been choreographed so flawlessly, needs no introduction. It is the dexterity and perfection of the dancers which brings Peter Tchaikovsky's fantasy Swan Lake back to life once more. The story of girls that have been turned into swans and live on a lake of tears—a curse that can only be broken by a prince's love—is presented at ICE Kraków by the Royal Ukrainian Ballet.",
+    description:
+      "<section>This timeless and well-known performance, with its costumes, music, and fantastic story that has been choreographed so flawlessly, needs no introduction. It is the dexterity and perfection of the dancers which brings Peter Tchaikovsky's fantasy <b><i>Swan Lake</i></b> back to life once more. The story of girls that have been turned into swans and live on a lake of tears—a curse that can only be broken by a prince's love—is presented at ICE Kraków by the <b>Royal Ukrainian Ballet</b>.</section>",
+    tags: ["Ballet"],
+    location: [50.04795689836607, 19.93139962641374],
+    image: "/images/royal-ukrainian-ballet.jpg",
+    created: "2024-09-23",
   },
 ];
 
