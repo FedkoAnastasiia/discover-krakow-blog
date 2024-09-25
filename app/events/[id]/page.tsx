@@ -13,6 +13,15 @@ import "./page.scss";
 const Event = (props: { params: { id: string } }) => {
   const event = Array.from(events).find((p) => p.id === props.params.id);
 
+  const EventPost = useMemo(
+    () =>
+      dynamic(() => import("@/components/EventPost"), {
+        ssr: false,
+        loading: () => <p>Loading...</p>,
+      }),
+    []
+  );
+
   const Map = useMemo(
     () =>
       dynamic(() => import("@/components/Map"), {
@@ -31,10 +40,7 @@ const Event = (props: { params: { id: string } }) => {
       <article className="eventContainer">
         <p className="eventTitle">{event.title}</p>
         <h5>{moment(event.date).format("D MMMM YYYY, dddd")}</h5>
-        <div
-          className="eventDescription"
-          dangerouslySetInnerHTML={{ __html: event.description }}
-        />
+        <EventPost description={event.description} />
       </article>
       <Map location={event.location} />
     </div>
