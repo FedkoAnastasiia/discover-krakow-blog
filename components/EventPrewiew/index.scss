@@ -19,6 +19,7 @@
 
     p {
       text-align: justify;
+      overflow: hidden;
     }
 
     .eventDate {
@@ -26,5 +27,11 @@
       word-spacing: 2px;
       font-weight: 300;
     }
+  }
+
+  &.gridView {
+    width: 45%;
+    height: 400px;
+    overflow: hidden;
   }
 }

@@ -6,8 +6,6 @@ import { useEffect, useState } from "react";
 import Light from "../../data/icons/light.svg";
 import Dark from "../../data/icons/dark.svg";
 
-import "./index.scss";
-
 const ThemeButton = () => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
@@ -20,7 +18,7 @@ const ThemeButton = () => {
 
   return (
     <button
-      className="themeButton"
+      className="iconButton"
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
       {theme === "light" ? <Dark /> : <Light />}
     </button>

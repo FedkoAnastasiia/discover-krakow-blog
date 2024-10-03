@@ -1,11 +1,24 @@
 .eventsContainer {
   width: 100%;
+
+  .eventViewChange {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+  }
   .ant-tabs {
     color: rgb(var(--primary-color));
 
     .ant-tabs-content-holder {
       border: 1px solid rgb(var(--primary-color));
       border-top: none;
+    }
+
+    &.gridView {
+      .ant-tabs-tabpane.ant-tabs-tabpane-active {
+        flex-flow: row wrap;
+      }
     }
 
     .ant-tabs-tabpane.ant-tabs-tabpane-active {
