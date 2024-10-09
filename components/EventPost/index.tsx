@@ -1,3 +1,5 @@
+import DOMPurify from "dompurify";
+
 import "./index.scss";
 
 export interface IEventPostProps {
@@ -5,10 +7,12 @@ export interface IEventPostProps {
 }
 
 const EventPost = ({ description }: IEventPostProps) => {
-  const eventDescription = document.createElement("div");
-  eventDescription.innerHTML = description;
-  eventDescription.className = "eventDescription";
-  return <>{eventDescription}</>;
+  return (
+    <div
+      className="eventDescription"
+      dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(description) }}
+    />
+  );
 };
 
 export default EventPost;
