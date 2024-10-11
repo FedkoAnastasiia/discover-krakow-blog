@@ -23,7 +23,7 @@ const EventPrewiew = ({ event, gridView }: IEventPreviewProps) => {
           {moment(event.date).format("DD MMMM YYYY")}
         </span>
         <h2>{event.title}</h2>
-        <p>{event.preview}</p>
+        <p className="scrollbox">{event.preview}</p>
       </div>
     </Link>
   );
