@@ -1,9 +1,9 @@
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
-  --font-mono: Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  --font-mono: Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono",
+    "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono",
+    "Droid Sans Mono", "Courier New", monospace;
   --primary-color: 0, 100, 167;
   --secondary-color: 244, 249, 255;
   --primary-shadow-color: 81, 126, 203;
@@ -33,7 +33,7 @@ body {
 body {
   min-height: 100vh;
   color: rgb(var(--primary-color));
-  background: rgb(var(--secondary-color))
+  background: rgb(var(--secondary-color));
 }
 
 a {
@@ -54,11 +54,29 @@ main {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 4rem 0;
+  padding: 3rem 0;
 }
 
 .pageContainer {
   margin: 0 auto;
   width: 90vw;
   min-height: 100vh;
+}
+
+.iconButton {
+  border: none;
+  background-color: transparent;
+
+  &:hover {
+    background-color: transparent;
+  }
+
+  svg {
+    height: 25px;
+    width: 25px;
+
+    > path {
+      fill: rgb(var(--primary-color));
+    }
+  }
 }
