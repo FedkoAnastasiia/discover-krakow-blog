@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import moment from "moment";
 
+import SaveItem from "../SaveItem";
 import { IEvent } from "@/common/interfaces";
 
 import "./index.scss";
@@ -17,7 +18,10 @@ const EventPrewiew = ({ event, gridView }: IEventPreviewProps) => {
     <Link
       href={`/events/${event.id}`}
       className={classNames("eventLinkContainer", { gridView })}>
-      <Image src={event.image} width={280} height={200} alt={event.id} />
+      <div>
+        <Image src={event.image} width={280} height={200} alt={event.id} />
+        <SaveItem id={event.id} />
+      </div>
       <div className="descriptionContainer">
         <span className="eventDate">
           {moment(event.date).format("DD MMMM YYYY")}
