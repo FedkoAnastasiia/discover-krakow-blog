@@ -32,7 +32,7 @@
       justify-content: space-between;
 
       .ant-tabs-tab {
-        width: 33.33%;
+        width: 25%;
         padding: 8px 30px;
         justify-content: center;
         margin: 0;
@@ -40,16 +40,18 @@
         border-bottom: none;
         background: rgb(var(--secondary-color));
         color: rgb(var(--neutral-color));
+        font-weight: 600;
 
         &.ant-tabs-tab-active > .ant-tabs-tab-btn {
           color: rgb(var(--primary-color));
+          font-weight: 700;
         }
 
         &:not(:first-child) {
           border-left: none;
         }
 
-        &:not(:nth-child(3)) {
+        &:not(:nth-child(4)) {
           border-right: none;
         }
       }
