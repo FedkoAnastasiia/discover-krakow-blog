@@ -2,8 +2,8 @@
 
 import { Button, TabPaneProps, Tabs, TabsProps } from "antd";
 import classNames from "classnames";
-import { useCallback, useEffect, useMemo, useState } from "react";
 import moment from "moment";
+import { useCallback, useEffect, useMemo, useState } from "react";
 
 import { IEvent } from "@/common/interfaces";
 import EventPrewiew from "@/components/EventPrewiew";
@@ -16,6 +16,7 @@ import "./page.scss";
 
 const Events = () => {
   const [gridView, setGridView] = useState(false);
+  const [activeTab, setActiveTab] = useState("ALL");
 
   const getEventPreview = useCallback(
     (eventsList: IEvent[]) =>
@@ -25,10 +26,23 @@ const Events = () => {
     [gridView]
   );
 
+  const getLikedEvents = (activeTab: string) => {
+    if (activeTab === "LIKED") {
+      const savedEvents = window.localStorage.getItem("saved");
+      if (savedEvents) {
+        const eventsList = JSON.parse(savedEvents);
+        if (Array.isArray(eventsList)) {
+          return events.filter((e) => eventsList.includes(e.id));
+        }
+      }
+    }
+    return [];
+  };
+
   const items: TabsProps["items"] = useMemo(
     () => [
       {
-        label: "All events",
+        label: "All",
         key: "ALL",
         children: getEventPreview(
           events.sort((a, b) =>
@@ -37,21 +51,26 @@ const Events = () => {
         ),
       },
       {
-        label: "Upcoming events",
+        label: "Upcoming",
         key: "UPCOMING",
         children: getEventPreview(
           events.filter((e) => moment(e.date).isAfter(moment()))
         ),
       },
       {
-        label: "Past events",
+        label: "Past",
         key: "PAST",
         children: getEventPreview(
           events.filter((e) => moment(e.date).isSameOrBefore(moment()))
         ),
       },
+      {
+        label: "Liked",
+        key: "LIKED",
+        children: getEventPreview(getLikedEvents(activeTab)),
+      },
     ],
-    [getEventPreview]
+    [getEventPreview, activeTab]
   );
 
   return (
@@ -66,6 +85,7 @@ const Events = () => {
         type="card"
         items={items}
         centered
+        onTabClick={(activeKey) => setActiveTab(activeKey)}
       />
     </div>
   );
