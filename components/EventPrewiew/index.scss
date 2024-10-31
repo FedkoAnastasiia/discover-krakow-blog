@@ -50,6 +50,45 @@
     }
   }
 
+  @media (max-width: 1280px) {
+    height: 300px;
+  }
+
+  @media (max-width: 1024px) {
+    img {
+      width: 230px;
+      height: 180px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    overflow: scroll;
+    gap: 5px;
+    height: 400px;
+
+    .descriptionContainer {
+      align-items: center;
+
+      h2 {
+        text-align: center;
+      }
+    }
+
+    .imageContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+
+      img {
+        width: 350px;
+        height: 240px;
+      }
+    }
+  }
+
   &.gridView {
     width: 45%;
     height: 350px;

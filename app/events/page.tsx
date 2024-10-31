@@ -77,7 +77,7 @@ const Events = () => {
     <div className="eventsContainer">
       <div className="eventViewChange">
         <button className="iconButton" onClick={() => setGridView(!gridView)}>
-          {gridView ? <GridView /> : <ListView />}
+          {gridView ? <ListView /> : <GridView />}
         </button>
       </div>
       <Tabs
