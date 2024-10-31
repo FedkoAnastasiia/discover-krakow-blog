@@ -20,4 +20,8 @@
       fill: rgb(var(--primary-color));
     }
   }
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+  }
 }

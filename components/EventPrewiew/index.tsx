@@ -18,7 +18,7 @@ const EventPrewiew = ({ event, gridView }: IEventPreviewProps) => {
     <Link
       href={`/events/${event.id}`}
       className={classNames("eventLinkContainer", { gridView })}>
-      <div>
+      <div className="imageContainer">
         <Image src={event.image} width={280} height={200} alt={event.id} />
         <SaveItem id={event.id} />
       </div>
